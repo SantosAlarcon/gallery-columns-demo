@@ -31,6 +31,15 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+
+		--text-color: #112;
+		--text-color-dark: #ddf;
+		--background-color: #ddf;
+	    --background-color-dark: #112;
+
+	    color-scheme: light dark;
+	    color: light-dark(var(--text-color), var(--text-color-dark));
+	    background-color: light-dark(var(--background-color), var(--background-color-dark));
 	}
 	html {
 		font-family: system-ui, sans-serif;
